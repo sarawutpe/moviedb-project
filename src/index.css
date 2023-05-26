@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vite-logo,
+.react-logo {
+  height: 2.5rem;
+  transition: filter 300ms;
+}
+
+.vite-logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.react-logo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
