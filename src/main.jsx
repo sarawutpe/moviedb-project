@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import 'react-toastify/dist/ReactToastify.css'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Dashboard from './pages/Dashboard.jsx'
 import { ToastContainer } from 'react-toastify'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Dashboard from './pages/Dashboard/Dashboard.jsx'
+import 'react-toastify/dist/ReactToastify.css'
 
 const router = createBrowserRouter([
   {
@@ -45,9 +45,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       newestOnTop={false}
       closeOnClick
       rtl={false}
-      pauseOnFocusLoss
+      pauseOnFocusLoss={false}
       draggable
-      pauseOnHover
+      pauseOnHover={false}
       theme="light"
     />
     <ToastContainer />

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function DashboardWrapper(props) {
   const navigate = useNavigate()
-  const { children } = props
+  const { children, movieCount = 0 } = props
   const [isOpenMenu, setIsOpenMenu] = useState(false)
 
   const handleSidebar = () => {
@@ -58,7 +58,7 @@ export default function DashboardWrapper(props) {
                 <HomeIcon className="w-[24px] h-[24px] text-[#6b7280]" />
                 <span className="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
                 <span className="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full">
-                  3
+                  {movieCount}
                 </span>
               </div>
             </li>

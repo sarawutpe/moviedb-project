@@ -3,6 +3,7 @@ import axios from 'axios'
 // https://axios-http.com/docs/instance
 // https://axios-http.com/docs/interceptors
 
+// Use case of Singleton with Axios
 const httpClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 })

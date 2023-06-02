@@ -1,7 +1,7 @@
 import httpClient from './httpClient'
 
-export const serviceGetMovies = async () => {
-  const result = await httpClient.get(`/movies`)
+export const serviceGetMovie = async (search) => {
+  const result = await httpClient.get(`/movies?q=${search || ''}`)
   return result
 }
 
