@@ -5,6 +5,7 @@ import AddMovieModal from './AddMovieModal'
 import UpdateMovieModal from './UpdateMovieModal'
 import { serviceGetMovies } from '../../services/services'
 import debounce from 'lodash.debounce'
+import Confirm from '@/components/Confirm'
 
 export default function Dashboard() {
   const [isOpenAddModal, setIsOpenAddModal] = useState(false)
@@ -66,36 +67,47 @@ export default function Dashboard() {
             <thead className="text-xs text-gray-700 uppercase bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-3">
-                  name
+                  Title
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Color
+                  Language
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Category
+                  Overview
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Price
+                  Poster Path
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Created Time
+                  Release Date
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Updated Time
+                  Popularity
                 </th>
-                <th scope="col" className="px-6 py-3"></th>
+                <th scope="col" className="px-6 py-3">
+                  Status
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  Action
+                </th>
               </tr>
             </thead>
             <tbody>
               <tr className="bg-white border-b">
-                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  Apple MacBook Pro 17
-                </th>
-                <td className="px-6 py-4">Silver</td>
-                <td className="px-6 py-4">Laptop</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">$2999</td>
-                <td className="px-6 py-4">$2999</td>
+                <td className="px-6 py-4">-</td>
+                <td className="px-6 py-4">-</td>
+                <td className="px-6 py-4">-</td>
+                <td className="px-6 py-4">-</td>
+                <td className="px-6 py-4">-</td>
+                <td className="px-6 py-4">-</td>
+                <td className="px-6 py-4">
+                  <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium uppercase text-red-700 ring-1 ring-inset ring-red-600/10">
+                    Upcoming
+                  </span>
+                  <span className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium uppercase text-green-700 ring-1 ring-inset ring-green-600/20">
+                    Released
+                  </span>
+                </td>
                 <td className="px-6 py-4">
                   <div className="flex">
                     <button className="flex justify-center items-center mx-2 rounded-lg hover:bg-gray-100 w-[32px] h-[32px]">
@@ -113,6 +125,7 @@ export default function Dashboard() {
         {/* Show modal */}
         <AddMovieModal title={'Add Movie'} open={isOpenAddModal} onClose={() => setIsOpenAddModal(false)} />
         <UpdateMovieModal title={'Update Movie'} open={isOpenUpdateModal} onClose={() => setIsOpenUpdateModal(false)} />
+        <Confirm title={'confirm'} open={false} onConfirm={() => {}} onClose={() => {}} />
       </DashboardWrapper>
     </>
   )

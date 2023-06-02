@@ -3,7 +3,8 @@
       "baseUrl": ".",
       "checkJs": true,
       "paths": {
-        "@/*": ["src/*"]
+        "@/*": ["src/*"],
+        "@/components/*": ["src/components/*"],
       },
       "jsx": "react",
       "module": "es2020",
@@ -15,7 +16,7 @@
       "skipLibCheck": true,
       "types": [
         "vite/client"
-      ]
+      ],
     },
     "exclude": ["node_modules", "build", "dist"]
   }
