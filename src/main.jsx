@@ -5,32 +5,16 @@ import './index.css'
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Login from './pages/Login/Login.jsx'
-import Register from './pages/Register/Register.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     errorElement: <p>404 Not Found!</p>,
-    element: <App />,
     children: [
       {
         path: '',
         element: <p>No Content</p>,
-      },
-      {
-        path: 'auth',
-        children: [
-          {
-            path: 'login',
-            element: <Login />,
-          },
-          {
-            path: 'register',
-            element: <Register />,
-          },
-        ],
       },
       {
         path: 'dashboard',
