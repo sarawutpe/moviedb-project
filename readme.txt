@@ -19,7 +19,9 @@ fa-2xl	2em	32px
 React-toastify
 https://fkhadra.github.io/react-toastify/introduction
 
-
 React Router
 react-router-dom
 https://reactrouter.com/en/main
+
+To create a debounced search
+$ yarn add lodash.debounce
