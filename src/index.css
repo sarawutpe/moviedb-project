@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+input {
+  outline: none;
+}
+
 .vite-logo,
 .react-logo {
   height: 2.5rem;

@@ -1,20 +1,8 @@
-import Dashboard from './layouts/Dashboard'
-import reactLogo from '/react.svg'
-import viteLogo from '/vite.svg'
-
-import {
-  HomeIcon,
-  VideoCameraIcon,
-  FolderIcon,
-  ArrowRightCircleIcon,
-} from '@heroicons/react/24/solid'
+import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
-  return (
-    <>
-      <Dashboard>123456</Dashboard>
-    </>
-  )
+  return <Outlet />
 }
 
 export default App
