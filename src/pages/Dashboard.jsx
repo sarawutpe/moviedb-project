@@ -205,7 +205,7 @@ export default function Dashboard() {
       </DashboardWrapper>
       {/* Show modal form add */}
       <AddMovieModal
-        title={`Update Movie`}
+        title={`Add Movie`}
         open={isOpenAddModal}
         onClose={() => setIsOpenAddModal(false)}
         onReload={() => fetchMovies('')}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 
 export default function Confirm(props) {
